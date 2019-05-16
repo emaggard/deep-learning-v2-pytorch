@@ -1,0 +1,55 @@
+Tests for training NN
+
+Iterations  learn_rate  hidden_nodes    output_nodes    results     Comments
+100         0.1         2               1               1.4         Default settings
+
+2000         3.5         2              1               0.21 0.24   Alright
+2000         2.5         2              1               0.11 0.22   OK fit
+2000         1.5         2              1               0.07 0.15   Fit well
+2000         1.0         2              1               0.07 0.17   Fit well
+2000         0.75        2              1               0.07 0.16   Fit well
+2000         0.5         2              1               0.10 0.19   Good
+2000         0.25        2              1               0.11 0.23   OK fit
+
+2000         3.5         4              1               0.07 0.14   Good fit
+2000         2.5         4              1               0.06 0.14   Good fit
+2000         1.5         4              1               0.21 0.39   Fit alright
+2000         1.0         4              1               0.07 0.17   Fit well
+2000         0.75        4              1               0.09 0.15   Fit well
+2000         0.5         4              1               0.10 0.19   Fit well
+2000         0.25        4              1               0.40 0.41   Floor of prediction did not go down to the floor of the data
+
+2000         3.5         6              1               0.07       
+2000         2.5         6              1               0.07 0.16   Fit alright, but training loss went down quickly     
+2000         1.5         6              1               0.07 0.17   Fit alright except for the lower samples, training loss went down faster than 1.0
+2000         1.0         6              1               0.07 0.16   Fit alright except for the lower samples
+2000         0.75        6              1               0.10 0.18   Seemed to fit the lower samples better     
+2000         0.5         6              1               0.06 0.14   Fit well, and had very low validation 
+2000         0.25        6              1               0.07 0.16   Fit well, and had very low validation 
+
+2000         4.5         8              1               0.07 0.15   Alright
+2000         3.5         8              1               0.07 0.15   Alright
+2000         2.5         8              1               0.06 0.13   Fit well
+2000         1.5         8              1               0.07 0.14   Fit well
+2000         1.0         8              1               0.07 0.17   Fit well
+2000         0.75        8              1               0.07 0.16   Fit well
+2000         0.5         8              1               0.08 0.14   Good
+2000         0.25        8              1               0.09 0.17   OK fit
+
+2000         3.5         10             1               0.59 0.91   Floor not as low as data
+2000         2.5         10             1               0.70 1.16   Fit lower peaks, but not higher
+2000         1.5         10             1               0.08 0.15   Fit well
+2000         1.0         10             1               0.07 0.18   Fit well
+2000         0.75        10             1               0.10 0.22   Fit OK
+2000         0.5         10             1               0.10 0.23   OK
+2000         0.25        10             1               0.23 0.41   OK
+
+2000         2.5         15             1               0.68 1.06   Floor not as low... not good fit
+2000         1.5         15             1               0.51 0.62   Floor not as low
+2000         1.0         15             1               0.07 0.16   Fit well
+2000         0.75        15             1               0.07 0.16   Fit well
+2000         0.5         15             1               0.18 0.36   OK
+2000         0.25        15             1               0.25 0.41   OK
+
+2000         1.0         40             1               Did not train well at all
+
